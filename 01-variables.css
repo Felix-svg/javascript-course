@@ -1,6 +1,9 @@
+body{
+    font-family: sans-serif;
+}
+
 .buttons{
     display: flex;
-    border: 1px solid red;
 }
 
 .buttons button{
@@ -17,7 +20,6 @@ button{
     font-weight: 600;
     background-color: white;
     border: 1px solid black;
-    font-family: sans-serif;
 }
 
 #quantity:hover{
@@ -58,5 +60,17 @@ button{
     background-color: red;
     color: white;
     border: none;
+}
+
+#results{
+  
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+    width: 50%;
+}
+
+#results p{
+    font-weight: bolder;
 }
 
