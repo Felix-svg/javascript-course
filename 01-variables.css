@@ -1,0 +1,62 @@
+.buttons{
+    display: flex;
+    border: 1px solid red;
+}
+
+.buttons button{
+    display: flex;
+    margin: 10px;
+    gap: 6px;
+}
+
+button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid black;
+    font-family: sans-serif;
+}
+
+#quantity:hover{
+    background-color: rgb(23, 130, 110);
+    color: white;
+    border: 1px solid white;
+}
+
+#add:hover{
+    background-color: crimson;
+    color: whitesmoke;
+    border: 1px solid white;
+}
+
+#two{
+    border-radius: 50%;
+    border: 1px solid green;
+}
+
+#two:hover{
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+#three{
+    border-radius: 50%;
+    border: 1px solid cadetblue;
+}
+
+#three:hover{
+    color: white;
+    background-color: rgb(9, 75, 134);
+    border: none;
+}
+
+#reset:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
+

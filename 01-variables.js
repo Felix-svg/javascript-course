@@ -25,6 +25,7 @@ function two() {
   twoButton.addEventListener("click", function () {
     cartQuantity = cartQuantity + 2;
     console.log(`Cart quantity: ${cartQuantity}`);
+    return cartQuantity;
   });
 }
 two();
@@ -34,6 +35,7 @@ function three() {
   threeButton.addEventListener("click", function () {
     cartQuantity = cartQuantity + 3;
     console.log(`Cart quantity: ${cartQuantity}`);
+    return cartQuantity;
   });
 }
 three();
@@ -41,8 +43,9 @@ three();
 function reset() {
   const resetButton = document.getElementById("reset");
   resetButton.addEventListener("click", function () {
-    cartQuantity = 0;
+    cartQuantity = cartQuantity;
     console.log(`Cart quantity: ${cartQuantity}`);
+    return cartQuantity;
   });
 }
 reset();
