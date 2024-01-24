@@ -49,6 +49,7 @@ function reset() {
   resetButton.addEventListener("click", () => {
     cartQuantity = 0;
     console.log(`Cart quantity: ${cartQuantity}`);
+    alert('Cart was reset!')
     displayCartQuantity();
     return cartQuantity;
   });
