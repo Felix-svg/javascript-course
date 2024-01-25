@@ -1,7 +1,7 @@
 function rockMove() {
   const rock = document.getElementById("rock");
   //const randomNumber = Math.random();
-  rock.addEventListener("click", function () {
+  rock.addEventListener("click", () => {
     const randomNumber = Math.random();
     let computerMove = "";
 
@@ -32,7 +32,7 @@ rockMove();
 
 function paperMove() {
   const paper = document.getElementById("paper");
-  paper.addEventListener("click", function () {
+  paper.addEventListener("click", () => {
     const randomNumber = Math.random();
     let computerMove = "";
 
@@ -61,7 +61,7 @@ paperMove()
 
 function scissorsMove() {
     const paper = document.getElementById("scissors");
-    paper.addEventListener("click", function () {
+    paper.addEventListener("click", () => {
       const randomNumber = Math.random();
       let computerMove = "";
   
