@@ -1,21 +1,7 @@
-let computerMove = "";
-
 function rockMove() {
   const rock = document.getElementById("rock");
   rock.addEventListener("click", () => {
-    // const randomNumber = Math.random();
-    // let computerMove = "";
-
-    // if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    //   computerMove = "rock";
-    // } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    //   computerMove = "paper";
-    // } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    //   computerMove = "scissors";
-    // }
-
-    // console.log(computerMove);
-    pickComputerMove()
+    const computerMove = pickComputerMove();
 
     let result = "";
     if (computerMove === "rock") {
@@ -35,19 +21,7 @@ rockMove();
 function paperMove() {
   const paper = document.getElementById("paper");
   paper.addEventListener("click", () => {
-    // const randomNumber = Math.random();
-    // let computerMove = "";
-
-    // if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    //   computerMove = "rock";
-    // } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    //   computerMove = "paper";
-    // } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    //   computerMove = "scissors";
-    // }
-    // console.log(computerMove);
-
-    pickComputerMove
+    const computerMove = pickComputerMove();
 
     let result = "";
     if (computerMove === "rock") {
@@ -66,18 +40,7 @@ paperMove();
 function scissorsMove() {
   const scissors = document.getElementById("scissors");
   scissors.addEventListener("click", () => {
-    // const randomNumber = Math.random();
-    // let computerMove = "";
-
-    // if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    //   computerMove = "rock";
-    // } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    //   computerMove = "paper";
-    // } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    //   computerMove = "scissors";
-    // }
-    // console.log(computerMove);
-    pickComputerMove()
+    const computerMove = pickComputerMove();
 
     let result = "";
     if (computerMove === "rock") {
@@ -94,8 +57,8 @@ function scissorsMove() {
 scissorsMove();
 
 function pickComputerMove() {
-   const randomNumber = Math.random();
-//   let computerMove = "";
+  const randomNumber = Math.random();
+  let computerMove = "";
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
     computerMove = "rock";
@@ -105,4 +68,5 @@ function pickComputerMove() {
     computerMove = "scissors";
   }
   console.log(computerMove);
+  return computerMove;
 }
