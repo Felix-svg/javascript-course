@@ -1,38 +1,15 @@
 function rockMove() {
   const rock = document.getElementById("rock");
   rock.addEventListener("click", () => {
-    const computerMove = pickComputerMove();
-
-    let result = "";
-    if (computerMove === "rock") {
-      result = "Tie";
-    } else if (computerMove === "paper") {
-      result = "You lose";
-    } else if (computerMove === "scissors") {
-      result = "You win";
-    }
-
-    alert(`You picked rock. Computer picked ${computerMove}. ${result}.`);
+    playGame("rock");
   });
 }
-
 rockMove();
 
 function paperMove() {
   const paper = document.getElementById("paper");
   paper.addEventListener("click", () => {
-    const computerMove = pickComputerMove();
-
-    let result = "";
-    if (computerMove === "rock") {
-      result = "You win";
-    } else if (computerMove === "paper") {
-      result = "Tie";
-    } else if (computerMove === "scissors") {
-      result = "You lose";
-    }
-
-    alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
+    playGame("paper");
   });
 }
 paperMove();
@@ -40,18 +17,7 @@ paperMove();
 function scissorsMove() {
   const scissors = document.getElementById("scissors");
   scissors.addEventListener("click", () => {
-    const computerMove = pickComputerMove();
-
-    let result = "";
-    if (computerMove === "rock") {
-      result = "You lose";
-    } else if (computerMove === "paper") {
-      result = "You win";
-    } else if (computerMove === "scissors") {
-      result = "Tie";
-    }
-
-    alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+    playGame("scissors");
   });
 }
 scissorsMove();
@@ -69,4 +35,19 @@ function pickComputerMove() {
   }
   console.log(computerMove);
   return computerMove;
+}
+
+function playGame(playerMove) {
+  const computerMove = pickComputerMove();
+
+  let result = "";
+  if (computerMove === "rock") {
+    result = "You lose";
+  } else if (computerMove === "paper") {
+    result = "You win";
+  } else if (computerMove === "scissors") {
+    result = "Tie";
+  }
+
+  alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
 }
