@@ -1,6 +1,24 @@
-const score = JSON.parse(localStorage.getItem('score'))
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  losses: 0,
+  ties: 0
+}
 
+// if(score === null){
+//   score = {
+//     wins: 0,
+//     losses: 0,
+//     ties: 0
+//   }
+// }
 
+// if(!score){
+//   score = {
+//     wins: 0,
+//     losses: 0,
+//     ties: 0
+//   }
+// }
 
 function rockMove() {
   const rock = document.getElementById("rock");
@@ -91,6 +109,7 @@ function reset() {
   score.wins = 0
   score.losses = 0
   score.ties = 0
+  localStorage.removeItem('score')
  })
 
 }
