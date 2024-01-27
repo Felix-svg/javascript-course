@@ -1,8 +1,6 @@
-const score = {
-  wins: 0,
-  losses: 0,
-  ties: 0,
-};
+const score = JSON.parse(localStorage.getItem('score'))
+
+
 
 function rockMove() {
   const rock = document.getElementById("rock");
@@ -81,6 +79,8 @@ function playGame(playerMove) {
     score.ties += 1;
   }
 
+  localStorage.setItem('score',JSON.stringify(score))
+
   alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 }
@@ -88,7 +88,6 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 function reset() {
  const resetButton = document.getElementById('reset-score')
  resetButton.addEventListener('click', function(){
-  //console.log('clicked')
   score.wins = 0
   score.losses = 0
   score.ties = 0
